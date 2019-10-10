@@ -50,10 +50,305 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+background-color: pink;
+}
+
+.container{
+	background-color: white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+
+@titlefonts: 2.5rem;
+@contentfonts: 1.8rem;
+@contentfontheight: 4rem;
+@favborder: 1px solid pink;
+@mediacontentfonts: 1.2rem;
+
+.contactsame(){
+	background-color: lightgrey;
+	padding: 2%;
+	border: 1px solid black;
+}
+
+.headeredit(){
+	font-weight: bold;
+	text-align: center;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	margin: 0 auto;
+	width: 90%;
+	font-size: 62.5%;
+	font-family: 'Oxygen', sans-serif;
 }
 
+.nav{
+	display: flex;
+	justify-content: space-between;
+
+	@media(max-width: 500px){
+		flex-direction: column;
+		align-items: center;
+	}//End of Nav media
+
+
+	h1{
+		font-size: @contentfontheight;
+		text-align: center;
+
+		@media(max-width: 500px){
+			font-size: 3rem;
+			padding: 15% 0%;
+			font-weight: bold;
+		}//End of media header
+	}//Ends Name Logo
+
+	.links{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 85%;
+		height: auto;
+
+		@media(max-width: 500px){
+			flex-direction: column;
+			justify-content: center;
+		}//End of links media
+
+		a{
+			
+			display: flex;
+			width: 25%;
+			text-decoration: none;
+			font-size: @titlefonts;
+			color: dimgrey;
+			padding: 2%;
+
+			@media(max-width: 500px){
+				border: 1px solid grey;
+				width: 55%;
+				justify-content: center;
+				font-size: 1.8rems;
+				margin-bottom: 3%;
+			}
+		}//Ends a href in nav
+	} // Ends Links
+}//Ends Navigation
+
+.title{ 
+	display: flex;
+	padding: 2%;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.5rem;
+	border-top: @favborder;
+	border-bottom: @favborder;
+
+	@media(max-width: 500px){
+		font-size: 3rem;
+		border: 5px solid pink;
+		padding: 2% 10%;
+	}//End of title media
+
+}
+
+.topsection{
+	display: flex;
+	justify-content: space-around;
+
+	@media(max-width: 500px){
+		justify-content: center;
+		width: 100%;
+		border: 1px solid palevioletred;
+	}//End of Top Section Media
+
+	img{
+		width: 100%;
+		height: auto;
+		padding: 5%;
+
+		@media(max-width: 500px){
+			display: none;
+		}//End of media img
+	}//End of image
+	.about{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: @contentfonts;
+		width: 60%;
+		line-height: @contentfontheight;
+		text-align: center;
+		
+		@media(max-width: 500px){
+			width: 100%;
+			font-size: @mediacontentfonts;
+		}//End of about media
+
+		h2{
+			font-size: @titlefonts;
+			.headeredit();
+		}// End of Header
+		
+	}//End of About Section
+}//End of Top Section
+
+.skills{
+	font-size: @contentfonts;
+	line-height: 4rem;
+	padding: 2%;
+	border-bottom: @favborder;
+	border-top: @favborder;
+
+	@media(max-width: 500px){
+		font-size: @mediacontentfonts;
+		border: 1px solid palevioletred;
+	}//End of media skills
+
+	h2{
+		font-size: @titlefonts;
+		.headeredit();
+	}//End of Skills Header
+}//End of Skills Section
+
+.workhistory{
+	display: flex;
+	flex-direction: column;
+	font-size: @contentfonts;
+	padding: 2%;
+
+	@media(max-width: 500px){
+		font-size: @mediacontentfonts;
+		border: 1px solid palevioletred;
+	}//End of workhistory media
+
+	h2{
+		font-size: @titlefonts;
+		.headeredit();
+	}//End of Work Hist Header
+	.boxes{
+		display: flex;
+		justify-content: space-between;
+		padding: 2%;
+
+		@media(max-width: 500px){
+			flex-direction: column;
+		}//End of Boxes media
+
+		.box{
+			h3{
+				.headeredit();
+			}//End of box Main headers
+			h5{ 
+				.headeredit();
+				font-size: 1.4rem;
+			}//End of box Sub headers
+			border: 1px solid slategray;
+			width: 28%;
+			padding: 2%;
+			line-height: 2.5rem;
+
+			@media(max-width: 500px){
+				width: 100%;
+			}//End of box media				
+		}//End of small boxes
+	}//End of big box holding small boxes
+}//End of Work History
+
+
+
+.contact{
+	font-size: @contentfonts;
+	padding: 3%;
+	border-top: @favborder;
+
+	@media(max-width: 500px){
+		font-size: @mediacontentfonts;
+	}//End of contact media
+
+	h2{
+		font-size: @titlefonts;
+		.headeredit();
+	}//End of Header
+
+	.contacttop{
+		display: flex;
+		justify-content: space-between;
+
+		@media(max-width: 500px){
+			flex-direction: column;
+			align-items: center;
+		}//end of contact top media
+
+		.contactname{
+			.contactsame();
+			width: 45%;
+			margin: 1% 2%;
+		}//End of Name
+
+		.contactemail{
+			.contactsame();
+			width: 45%;
+			margin: 1% 2%;
+		}//End of Email	
+	}//End of Top of Contact Form
+
+	.contactphonenumber{
+		.contactsame();
+		margin: 2%;
+
+		@media(max-width: 500px){
+			width:45%;
+			margin: 0 auto;
+		}//End of phone num media
+	}//End of Phone Num
+
+	.contactmssg{
+		.contactsame();
+		margin: 2%;
+
+		@media(max-width: 500px){
+			width:45%;
+			margin: 1% auto;
+		}//End of Mssg media
+	}//End of Mssg
+
+	.sendbutton{
+		border: 2px solid black;
+		background-color: black;
+		color: white;
+		padding: 2%;
+		width: 35%;
+		font-size: @contentfonts;
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+
+		@media(max-width: 500px){
+			font-size: @mediacontentfonts;
+		}
+	}//End of Send Button
+}//End of Contact Form
+
+.footer{
+	display: flex;
+	align-content: space-around;
+	justify-content: space-between;
+	width: 50%;
+	margin-bottom: 5%;
+	padding: 3%;
+	margin: 0 auto;
+
+	i{
+		display: flex;
+		justify-content: center;
+		font-size: 5rem;
+	}//End of icons
+}//End of Footer
