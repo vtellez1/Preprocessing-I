@@ -1,1 +1,420 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: pink;
+}
+.container {
+  background-color: white;
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Regular'), local('Oxygen-Regular'), url(https://fonts.gstatic.com/s/oxygen/v9/2sDfZG1Wl4LcnbuKjk0j.ttf) format('truetype');
+}
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 62.5%;
+  font-family: 'Oxygen', sans-serif;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.nav h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .nav h1 {
+    font-size: 3rem;
+    padding: 15% 0%;
+    font-weight: bold;
+  }
+}
+.nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .nav .links {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.nav .links a {
+  display: flex;
+  width: 25%;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: dimgrey;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .nav .links a {
+    border: 1px solid grey;
+    width: 55%;
+    justify-content: center;
+    font-size: 1.8rems;
+    margin-bottom: 3%;
+  }
+}
+.title {
+  display: flex;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  border-top: 1px solid pink;
+  border-bottom: 1px solid pink;
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 3rem;
+    border: 5px solid pink;
+    padding: 2% 10%;
+  }
+}
+.topsection {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .topsection {
+    justify-content: center;
+    width: 100%;
+    border: 1px solid palevioletred;
+  }
+}
+.topsection img {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+}
+@media (max-width: 500px) {
+  .topsection img {
+    display: none;
+  }
+}
+.topsection .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  width: 60%;
+  line-height: 4rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .topsection .about {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+.topsection .about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.skills {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  padding: 2%;
+  border-bottom: 1px solid pink;
+  border-top: 1px solid pink;
+}
+@media (max-width: 500px) {
+  .skills {
+    font-size: 1.2rem;
+    border: 1px solid palevioletred;
+  }
+}
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.workhistory {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .workhistory {
+    font-size: 1.2rem;
+    border: 1px solid palevioletred;
+  }
+}
+.workhistory h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.workhistory .boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .workhistory .boxes {
+    flex-direction: column;
+  }
+}
+.workhistory .boxes .box {
+  border: 1px solid slategray;
+  width: 28%;
+  padding: 2%;
+  line-height: 2.5rem;
+}
+.workhistory .boxes .box h3 {
+  font-weight: bold;
+  text-align: center;
+}
+.workhistory .boxes .box h5 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  .workhistory .boxes .box {
+    width: 100%;
+  }
+}
+.contact {
+  font-size: 1.8rem;
+  padding: 3%;
+  border-top: 1px solid pink;
+}
+@media (max-width: 500px) {
+  .contact {
+    font-size: 1.2rem;
+  }
+}
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.contact .contacttop {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .contact .contacttop {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact .contacttop .contactname {
+  background-color: lightgrey;
+  padding: 2%;
+  border: 1px solid black;
+  width: 45%;
+  margin: 1% 2%;
+}
+.contact .contacttop .contactemail {
+  background-color: lightgrey;
+  padding: 2%;
+  border: 1px solid black;
+  width: 45%;
+  margin: 1% 2%;
+}
+.contact .contactphonenumber {
+  background-color: lightgrey;
+  padding: 2%;
+  border: 1px solid black;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .contact .contactphonenumber {
+    width: 45%;
+    margin: 0 auto;
+  }
+}
+.contact .contactmssg {
+  background-color: lightgrey;
+  padding: 2%;
+  border: 1px solid black;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .contact .contactmssg {
+    width: 45%;
+    margin: 1% auto;
+  }
+}
+.contact .sendbutton {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  padding: 2%;
+  width: 35%;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .contact .sendbutton {
+    font-size: 1.2rem;
+  }
+}
+.footer {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 5%;
+  padding: 3%;
+  margin: 0 auto;
+}
+.footer i {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+}
